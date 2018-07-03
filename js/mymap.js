@@ -1,7 +1,7 @@
 function myMap() {
     var mapCanvas = document.getElementById("googleMap");
     var myLatlng = new google.maps.LatLng(49.9667396, 7.904596);
-    var Lieblingsurlaubsziel_Marc = new google.maps.LatLng(38.689421, -9.177057);
+    var Lieblingsurlaubsziel_Marc = new google.maps.LatLng(38.889820, -77.005927);
     var Lieblingsurlaubsziel_Steffen = new google.maps.LatLng(6.834971, 81.838338);
     var mapOptions = {
         center: myLatlng,
