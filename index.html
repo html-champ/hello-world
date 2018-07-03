@@ -1,26 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Hello, world!</title>
 </head>
 
 <body>
+    <div class="container-fluid">
+        <h1>Entwicklungsaufgabe 1: "Gruppenmitglieder"</h1>
+        <p></p>
+    </div>
 
-    <p id="geoSupported"> Info über Geolocation</p>
-    <button onclick="holePosition()">Hole Position</button>
-    <h2 id="breite"> Breitengrad</h2>
-    <h2 id="laenge"> Längengrad</h2>
-    <h2 id="genau"> Genauigkeit</h2>
-    <script src="js/geoloc.js"></script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md" style="background-color:lightgrey;">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Mitglieder der Gruppe:</th>
+                                <th scope="col">Bilder der Teilnehmer:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Marc Schneider</td>
+                                <td align="CENTER"><img src="images/Profilbild_1_Marc_Schneider.jpg" width="100"></td>
+                            </tr>
 
-    <p id="dmeSupported"> Info über Device Motion</p>
-    <h1 id="xBeschl"> Daten x</h1>
-    <h1 id="yBeschl"> Daten y</h1>
-    <h1 id="zBeschl"> Daten z</h1>
-    <h1 id="meinMax"> max z</h1>
-    <script src="js/devicemotion.js"></script>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Steffen Hess</td>
+                                <td align="CENTER"><img src="images/Profilbild_2_Steffen_Hess.jpg" width="100"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
