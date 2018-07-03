@@ -1,11 +1,12 @@
 function myMap() {
     var mapCanvas = document.getElementById("googleMap");
     var myLatlng = new google.maps.LatLng(49.9667396, 7.904596);
-    var Lieblingsurlaubsziel_Marc = new google.maps.LatLng(38.889820, -77.005927);
-    var Lieblingsurlaubsziel_Steffen = new google.maps.LatLng(6.834971, 81.838338);
+    var lieblingsurlaubszielMarc = new google.maps.LatLng(38.889820, -77.005927);
+    var lieblingsurlaubszielSteffen = new google.maps.LatLng(6.834971, 81.838338);
+    var mitteDerDreiPunkte = new google.maps.LatLng(32.248995, 3.879841);
     var mapOptions = {
-        center: myLatlng,
-        zoom: 2
+        center: mitteDerDreiPunkte,
+        zoom: 3
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
 
@@ -16,12 +17,12 @@ function myMap() {
     });
 
     var marker_Urlaub_Marc = new google.maps.Marker({
-        position: Lieblingsurlaubsziel_Marc,
+        position: lieblingsurlaubszielMarc,
         title: "Lieblingsurlaubziel Marc"
     });
 
     var marker_Urlaub_Steffen = new google.maps.Marker({
-        position: Lieblingsurlaubsziel_Steffen,
+        position: lieblingsurlaubszielSteffen,
         title: "Lieblingsurlaubziel Steffen"
     });
 
