@@ -3,44 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>mein Dokument Registerkarte</title>
-    <link rel="stylesheet" href="h5styles.css">
-
 
 </head>
 
 <body>
-    <h1 class="allesGelb"> Überschrift h1 </h1>
-    <p>
-        <ol>
-            <li>erster Eintrag</li>
-            <li>zweiter Eintrag</li>
-        </ol>
 
-        <Table>
-            <tr>
-                <th>Ein Element</th>
-                <th>Noch ein Element</th>
-            </tr>
-            <tr>
-                <td>das dritte Elemement</td>
-                <td>Noch ein Element</td>
-            </tr>
-        </Table>
-        <p>
-            <a href="http://www.google.de">
-                <img src="images/test_lampe.png" width="100" height="100">
-            </a>
-
-        </p>
-        <a href="http://th-bingen.de">
-            <img src="images/logo.svg" width="100" height="100">
-        </a>
-
-        <p id="ID1"> Besonderer Text</p>
-        <p> normaler Text </p>
-        <p>
-
+    <p id="geoSupported"> Info über Geolocation</p>
+    <button onclick="holePosition()">Hole Position</button>
+    <h2 id="breite"> Breitengrad</h2>
+    <h2 id="laenge"> Längengrad</h2>
+    <h2 id="genau"> Genauigkeit</h2>
+    <script src="js/geoloc.js"></script>
 
 </body>
 
