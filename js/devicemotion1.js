@@ -1,6 +1,6 @@
 if (window.DeviceMotionEvent) {
     document.getElementById("doeSupported").innerText = "Device Rotation wird unterstützt!";
-    window.addEventListener('deviceorientation', function(event) {
+    window.addEventListener('devicemotion', function(event) {
 
         document.getElementById("xRotation").innerHTML = 'Rotationsrate beta um x-Achse: ' + event.rotationRate.alpha.toFixed(2);
         document.getElementById("yRotation").innerHTML = 'Rotationsrate gamma um y-Achse: ' + event.rotationRate.beta.toFixed(2);
