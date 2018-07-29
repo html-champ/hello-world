@@ -1,5 +1,5 @@
 if (window.DeviceMotionEvent) {
-    document.getElementById("doeSupported").innerText = "Device Rotation wird unterstützt!";
+    document.getElementById("dmeSupported").innerText = "Device Rotation wird unterstützt!";
     window.addEventListener('devicemotion', function(event) {
 
         document.getElementById("xRotation").innerHTML = 'Rotationsrate beta um x-Achse: ' + event.rotationRate.alpha.toFixed(2);
@@ -8,5 +8,5 @@ if (window.DeviceMotionEvent) {
 
     });
 } else {
-    document.getElementById("doeSupported").innerText = "Device Rotation wird nicht unterstützt!";
+    document.getElementById("dmeSupported").innerText = "Device Rotation wird nicht unterstützt!";
 }
