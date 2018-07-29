@@ -1,9 +1,9 @@
 if (window.DeviceMotionEvent) {
     document.getElementById("dmeSupported").innerText = "Device Motion wird unterstützt!";
     window.addEventListener('devicemotion', function(event) {
-        document.getElementById("xBeschl").innerHTML = 'x ' + event.acceleration.x.toFixed(1);
-        document.getElementById("yBeschl").innerHTML = 'y ' + event.acceleration.y.toFixed(1);
-        document.getElementById("zBeschl").innerHTML = 'z ' + event.acceleration.z.toFixed(1);
+        document.getElementById("xBeschl").innerHTML = 'Geschwindigkeit in x-Richtung ' + event.acceleration.x.toFixed(1);
+        document.getElementById("yBeschl").innerHTML = 'Geschwindigkeit in y-Richtung ' + event.acceleration.y.toFixed(1);
+        document.getElementById("zBeschl").innerHTML = 'Geschwindigkeit in z-Richtung ' + event.acceleration.z.toFixed(1);
     });
 
 } else {
