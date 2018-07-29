@@ -1,9 +1,16 @@
 if (window.DeviceOrientationEvent) {
     document.getElementById("doeSupported").innerText = "Supported!!";
     window.addEventListener('deviceorientation', function(event) {
-        document.getElementById("xRot").innerHTML = 'x1 ' + event.acceleration.x1.toFixed(2);
-        document.getElementById("yRot").innerHTML = 'y1 ' + event.acceleration.y1.toFixed(2);
-        document.getElementById("zRot").innerHTML = 'z1 ' + event.acceleration.z1.toFixed(2);
+        document.getElementById('cube').style.webkitTransform =
+            document.getElementById('cube').style.transform =
+            'rotateX(' + event.beta + 'deg) ' +
+            'rotateY(' + event.gamma + 'deg) ' +
+            'rotateZ(' + event.alpha + 'deg)';
+
+        document.getElementById('beta').innerHTML = Math.round(event.beta);
+        document.getElementById('gamma').innerHTML = Math.round(event.gamma);
+        document.getElementById('alpha').innerHTML = Math.round(event.alpha);
+        document.getElementById('is-absolute').innerHTML = event.absolute ? "true" : "false";
     });
 
 } else {
