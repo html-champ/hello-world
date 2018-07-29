@@ -1,18 +1,17 @@
-if (window.DeviceOrientationEvent) {
-    document.getElementById("doeSupported").innerText = "Supported!!";
-    window.addEventListener('deviceorientation', function(event) {
-        document.getElementById('cube').style.webkitTransform =
-            document.getElementById('cube').style.transform =
-            'rotateX(' + event.beta + 'deg) ' +
-            'rotateY(' + event.gamma + 'deg) ' +
-            'rotateZ(' + event.alpha + 'deg)';
+function init() {
+    //Find our div containers in the DOM
+    var dataContainerOrientation = document.getElementById('dataContainerOrientation');
+    var dataContainerMotion = document.getElementById('dataContainerMotion');
 
-        document.getElementById('beta').innerHTML = Math.round(event.beta);
-        document.getElementById('gamma').innerHTML = Math.round(event.gamma);
-        document.getElementById('alpha').innerHTML = Math.round(event.alpha);
-        document.getElementById('is-absolute').innerHTML = event.absolute ? "true" : "false";
-    });
+    //Check for support for DeviceOrientation event
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', function(event) {
+            var alpha = event.alpha;
+            var beta = event.beta;
+            var gamma = event.gamma;
 
-} else {
-    document.getElementById("doeSupported").innerText = "Device Rotation wird nicht unterstützt!";
-};
+            if (alpha != null || beta != null || gamma != null)
+                dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+        }, false);
+    }
+}
