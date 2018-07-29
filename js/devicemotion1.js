@@ -1,6 +1,6 @@
-if (window.DeviceMotionEvent) {
-    document.getElementById("dmeSupported").innerText = "OK - Device Motion Rot wird unterstützt!";
-    window.addEventListener('devicemotion', function(event) {
+if (window.DeviceOrientationEvent) {
+    document.getElementById("doeSupported").innerText = "OK - Device Motion Rot wird unterstützt!";
+    window.addEventListener('deviceorientation', function(event) {
 
         document.getElementById("xRotation").innerHTML = 'Rotationsrate beta um x-Achse: ' + event.rotationRate.alpha.toFixed(2);
         document.getElementById("yRotation").innerHTML = 'Rotationsrate gamma um y-Achse: ' + event.rotationRate.beta.toFixed(2);
@@ -8,5 +8,5 @@ if (window.DeviceMotionEvent) {
 
     });
 } else {
-    document.getElementById("dmeSupported").innerText = "Device Motion wird nicht unterstützt!";
+    document.getElementById("doeSupported").innerText = "Device Motion wird nicht unterstützt!";
 }
