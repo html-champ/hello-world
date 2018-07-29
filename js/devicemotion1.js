@@ -1,4 +1,4 @@
-if (window.DeviceOrientationEvent) {
+if (window.DeviceMotionEvent) {
     document.getElementById("doeSupported").innerText = "Device Rotation wird unterstützt!";
     window.addEventListener('deviceorientation', function(event) {
 
