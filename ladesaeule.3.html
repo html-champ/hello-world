@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Hello, world!</title>
+    <title>Histroie</title>
+
 </head>
 
 <body>
@@ -14,6 +15,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,6 +53,8 @@
                     <th>Fahrer</th>
                     <th>Datum</th>
                     <th>Ladesäule</th>
+                    <th>kWh</th>
+                    <th>Kosten</th>
                 </tr>
             </thead>
             <tbody id="myTable">
@@ -57,38 +62,52 @@
                     <td>Marc Schneider</td>
                     <td>02.07.2018</td>
                     <td>Hindenburganlage 2, 55411 Bingen am Rhein</td>
+                    <td>87,2</td>
+                    <td>22,67€</td>
                 </tr>
                 <tr>
                     <td>Steffen Hess</td>
                     <td>05.07.2018</td>
                     <td>Rheinkai 21, 55411 Bingen am Rhein</td>
+                    <td>4,1</td>
+                    <td>1,06€</td>
                 </tr>
                 <tr>
                     <td>Frank Mehler</td>
                     <td>12.07.2018</td>
                     <td>Berlinstraße 109, 55411 Bingen am Rhein</td>
+                    <td>44,1</td>
+                    <td>11,44€</td>
                 </tr>
                 <tr>
-                    <td>Stefan Jost</td>
+                    <td>Sigmar Jost</td>
                     <td>16.07.2018</td>
                     <td>Museumstraße 3, 55411 Bingen am Rhein</td>
+                    <td>32,5</td>
+                    <td>8,45€</td>
                 </tr>
             </tbody>
         </table>
 
-        <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            $("#myInput").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        <script>
+            $(document).ready(function() {
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
                 });
             });
-        });
-    </script>
+        </script>
+
+
+        <div class="container">
+            <a href="#" onclick="window.print();"> <img src="images/printer.svg" style="width:5%"></a>
+            <p></p>
+            <a href="https://mail.zdv.net"><img src="images/mail.svg" style="width:5%"></a>
+            <p></p>
+        </div>
+
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Hello, world!</title>
+    <title>Ladesäule reservieren</title>
 </head>
 
 <body>
@@ -39,7 +39,74 @@
         <h3 align="CENTER">Ladesäule reservieren</h3>
     </div>
 
+    <div class="container">
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+        <script src="js/ladesauelen.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA84ZrNTtrdRZNl0E8l5PFlyDo59riRPCw&callback=myMap"></script>
+        <p></p>
+        <h2>Informationen zu Ladesäule:</h2>
+        <p></p>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Hindenburganlage 2, 55411 Bingen am Rhein
+                  </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        Diese Ladesäule befindet sich unmittelbar neben Restaurant „Riverside“ am Kulturufer von Bingen. Die neugestaltete Rheinpromenade lädt bei gutem Wetter zu einem Spaziergang ein. Die bingener Innenstadt ist fußläufig in 5 Minuten erreichbar. Besonders
+                        zu empfehlen ist außerdem ist die nahgelegene Vinothek, welche eine große Auswahl hervorragender Weine von der Nahe und aus Rheinhessen bietet.
+                    </div>
+                </div>
+            </div>
 
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Rheinkai 21, 55411 Bingen am Rhein
+                </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Diese Ladesäule befindet sich unmittelbar an der Touristen-Information Bingen. Die neugestaltete Rheinpromenade lädt bei gutem Wetter zu einem Spaziergang ein. Die bingener Innenstadt ist fußläufig in 5 Minuten erreichbar. Besonders zu empfehlen ist die
+                        nahgelegene Vinothek, welche eine große Auswahl köstlicher Weine aus Rheinhessen und von der Nahe bietet.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Berlinstraße 109, 55411 Bingen am Rhein
+                  </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Diese Ladesäule befindet sich an der wunderschönen technischen Hochschule in Bingen. Hier können Sie problemlos mehrere Jahre verbringen, von denen keine Sekunde verschenkt ist. Falls Sie der Hunger oder Durst plagt, gibt vor Ort eine der renommiertesten
+                        Mensen deutschlandweit.
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                            Museumstraße 3, 55411 Bingen am Rhein
+                      </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Direkt neben dem NH-Hotel Bingen. Die neugestaltete Rheinpromenade lädt bei gutem Wetter zu einem Spaziergang ein. Die bingener Innenstadt ist fußläufig in 5 Minuten erreichbar. Empfehlung: Kaffeerösterrei Klingler am Bürgermeister-Franz-Neff-Platz direkt
+                        unterhalb der Burg Klopp.
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
