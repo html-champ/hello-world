@@ -3,7 +3,7 @@ function vergleiche(a, b) {
 }
 
 function passwort(form) {
-    if (vergleiche("test", form.Password.value) && vergleiche("test", form.Username.value))
+    if (vergleiche("admin", form.Password.value) && vergleiche("admin", form.Username.value))
         window.location.assign("ladesaeule.4.1.html");
     else {
         alert("Login fehlgeschlagen, Passwort oder Benutzername falsch!");
