@@ -40,55 +40,39 @@
         <h3 align="CENTER">Entwicklungsaufgabe 2: "JavaScript und drei Autos"</h3>
         <p></p>
     </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md" style="background-color:lightgrey;">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Auto:</th>
-                                <th class="text-center" scope="col">Bild:</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <script>
-                                    var i, Zahl, Auto, Bilder, link;
-                                    Zahl = ["1", "2", "3"]
-                                    Auto = ["BMW 340i", "Tesla Model S", "Mercedes G-Klasse"];
-                                    Bilder = ["images/Bmw340i.jpg", "images/TeslaModelS.jpg", "images/MercedesGKlasse.jpg"];
-
-                                    for (i = 0; i < Zahl.length; i++) {
-
-                                        document.write("<tr>");
-                                        document.write("<th scope=\"row\">" + Zahl[i] + "</th>");
-                                        document.write("<td>" + Auto[i] + "</td>");
-                                        link = "<ul>";
-                                        link += "<img src=" + Bilder[i] + " width=\"100%\">";
-                                        link += "</ul>";
-                                        document.write("<td class=\"text-center\">" + link + "</td>");
-
-                                        document.write("</tr>");
-
-
-                                    }
-                                </script>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <div class="row">
+        <div class="col-md" style="background-color:lightgrey;">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Auto:</th>
+                            <th class="text-center" scope="col">Bild:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <script>
+                                var i, Zahl, Auto, Bilder;
+                                Zahl = ["1", "2", "3"]
+                                Auto = ["BMW 340i", "Tesla Model S", "Mercedes G-Klasse"];
+                                Bilder = ["images/Bmw340i.jpg", "images/TeslaModelS.jpg", "images/MercedesGKlasse.jpg"];
+                                for (i = 0; i < Zahl.length; i++) {
+                                    document.write("<tr>");
+                                    document.write("<th scope=\"row\">" + Zahl[i] + "</th>");
+                                    document.write("<td>" + Auto[i] + "</td>");
+                                    document.write("<td class=\"text-center\"> <img src=" + Bilder[i] + " width=\"100%\"></td>");
+                                    document.write("</tr>");
+                                }
+                            </script>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
     <p></p>
-
-
-
-
-
 </body>
 
 </html>
